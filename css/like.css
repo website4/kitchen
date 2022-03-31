@@ -1,0 +1,86 @@
+.change_like {
+	display: block;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	right: 30px;
+	bottom: -40px;
+	background-image: url('../images/like.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right top;
+	z-index: 7;
+}
+.change_like.is_liked {
+	background-image: url('../images/like3.png');
+}
+.favorites-container {
+	background: -webkit-gradient(linear,1deg,color-stop(0,F6D466),color-stop(100%,f6e86c));
+	background: -webkit-linear-gradient(1deg,#f6d466 0,#f6e86c 100%);
+	background: -o-linear-gradient(1deg,#f6d466 0,#f6e86c 100%);
+	background: -ms-linear-gradient(1deg,#f6d466 0,#f6e86c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE',endColorstr='#F4F60C',GradientType='1');
+	background: linear-gradient(1deg,#f6d466 0,#f6e86c 100%);
+	position: fixed;
+	z-index: 999;
+	bottom: 50px;
+	left: 80px;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	-moz-box-shadow: 0 0 19px 2px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 19px 2px rgba(0,0,0,.5);
+	box-shadow: 0 0 19px 2px rgba(0,0,0,.5);
+}
+.favorites-container:hover {
+	background: -webkit-gradient(linear,1deg,color-stop(0,f6e86c),color-stop(100%,F6D466));
+	background: -webkit-linear-gradient(1deg,#f6e86c 0,#f6d466 100%);
+	background: -o-linear-gradient(1deg,#f6e86c 0,#f6d466 100%);
+	background: -ms-linear-gradient(1deg,#f6e86c 0,#f6d466 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F4F60C',endColorstr='#1301FE',GradientType='1');
+	background: linear-gradient(1deg,#f6e86c 0,#f6d466 100%);
+}
+
+@media (max-width: 568px) {
+	.favorites-container {
+		display: none;
+	}
+
+	.fixed-bottom-buttons-in {
+		font-size: 0!important;
+	}
+	.fixed-bottom-buttons-in > .btn-sds {
+		width: 60px;
+		height: 48px;
+		box-sizing: border-box;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.mobile-favorites-container {
+		position: relative;
+		padding-left: 50px!important;
+		font-size: 20px;
+		line-height: 20px;
+		color: #000000bb;
+		margin-left: 10px;
+		font-weight: bold;
+		width: 70px!important;
+		padding-right: 10px!important;
+	}
+	.mobile-favorites-container::before {
+		content: "";
+		display: block;
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		left: 10px;
+		bottom: 7.5px;
+		background-image: url('../images/like1.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right top;
+		opacity: 0.8;
+	}
+
+}
